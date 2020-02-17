@@ -1,0 +1,21 @@
+# 启动trafik服务
+
+cd deploy/traefik_k8s
+
+## 创建configmap
+kubectl create configmap traefik-conf --from-file=traefik.toml -n kube-system
+
+## 创建rbac, 权限控制相关
+kubectl apply -f traefik-rbac.yaml
+
+## 创建traefik代理服务
+kubectl apply -f traefik-ds.yaml
+
+## 创建traefik ui服务
+kubectl apply -f traefik-ui.yaml
+
+# 之后再启动相关service, 详细可参考
+
+```
+deploy/service_k8s/batch_deploy.sh
+```

@@ -1,0 +1,7 @@
+service/bin
+deploy/*/*
+!deploy/ci-cd/*
+!deploy/traefik*/*
+!deploy/service*/*
+!deploy/*.sh
+!deploy/*/Dockerfile
