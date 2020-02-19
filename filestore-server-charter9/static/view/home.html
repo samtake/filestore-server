@@ -115,11 +115,11 @@
 
         var downloadHtml = '<button class="btn btn-success" ' +
           'style="height:30px;margin:5px 0;"' +
-          'onClick = "downloadFile(\'http://localhost:8080/file/' +
+          'onClick = "downloadFile(\'http://localhost:8010/file/' +
           'downloadurl?filehash={0}&{1}\')">下载</button>';
         var renameFileHtml = '<button class="btn btn-success" ' +
           'style="height:30px;margin:5px 3px;"' +
-          'onClick = "renameFile(\'{0}\',\'{1}\',\'http://localhost:8080/file/' +
+          'onClick = "renameFile(\'{0}\',\'{1}\',\'http://localhost:8010/file/' +
           'update?op=0&filehash={2}&{3}\')">重命名</button>';
 
         for (var i = 0; i < data.length; i++) {
