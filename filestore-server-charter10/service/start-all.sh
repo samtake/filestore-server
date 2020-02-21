@@ -29,6 +29,7 @@ run_service() {
 
 # 创建运行日志目录
 logpath=/Users/samtake/Documents/GitHub/www/data/log/filestore-server #/data/log/filestore-server
+
 mkdir -p $logpath
 
 # 切换到工程根目录
@@ -48,7 +49,6 @@ apigw
 "
 
 # 执行编译service
-mkdir -p service/bin/ && rm -f service/bin/*
 for service in $services
 do
     build_service $service
